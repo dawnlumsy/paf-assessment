@@ -1,0 +1,45 @@
+<h2>Song Upload</h2>
+
+
+<form #form="ngForm" (ngSubmit)="performUpdate(form)" method="post" action="/post-song" enctype="multipart/form-data">
+    <table>
+        <tr>
+            <td>Title:</td>
+            <td> <input id="title" type="text" name="title" required ngModel> </td>
+        </tr>
+        <tr>
+                <td>Country:</td>
+                <td>
+                    <select name="country" ngModel>
+                        <option *ngFor="let c of countries" [value]=c.country>{{c.country}}</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Listen slots:</td>
+                <td>
+                    <select name="listen_slots" ngModel>
+                        <option value=1>1</option>
+                        <option value=2>2</option>
+                        <option value=3>3</option>                                                
+                    </select>
+                </td>
+            </tr>                
+            <tr>
+                <td>Lyrics:</td>
+                <td> 
+                    <textarea id="lyrics" name="lyrics" cols="40" rows="5" ngModel></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>MP3 File:</td>
+                <td> <input id="song" type="file" name="song" ngModel #songFile> </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <button type="submit" >Upload</button>
+                </td>
+            </tr>
+    </table>
+</form>

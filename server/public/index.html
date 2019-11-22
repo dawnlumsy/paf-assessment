@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Song Upload</title>
+	</head>
+	<body>
+
+		<h1>Song Upload</h1>
+
+        <form method="post" action="/upload" enctype="multipart/form-data">
+       <!-- <form method="post" action="/uploadsql" enctype="multipart/form-data">     -->
+			<table>
+				<tr>
+					<td>Username:</td>
+					<td> <input id="username" type="text" name="username" required> </td>
+                </tr>
+				<tr>
+					<td>Title:</td>
+					<td> <input id="title" type="text" name="title" required> </td>
+                </tr>
+                <tr>
+					<td>Country:</td>
+					<td>
+                        <select name="country" ngModel>
+                            <option value='jp'>Japan</option>
+                            <option value='my'>Malaysia</option>
+                            <option value='ru'>Russia</option>
+                            <option value='sg'>Singapore</option>
+                            <option value='uk'>United Kingdom</option>
+                            <option value='us'>United States</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Listen slots:</td>
+                    <td>
+                        <select name="listen_slots" ngModel>
+                            <option value=1>1</option>
+                            <option value=2>2</option>
+                            <option value=3>3</option>  
+                        </select>
+                    </td>
+                </tr>                
+                <tr>
+                    <td>Lyrics:</td>
+                    <td> 
+                        <textarea id="lyrics" name="lyrics" cols="40" rows="5"></textarea>
+                    </td>
+                </tr>
+				<tr>
+					<td>MP3 File:</td>
+                    <td> <input id="song" type="file" name="song"> </td>
+                </tr>
+				<tr>
+					<td></td>
+					<td>
+                        <button type="submit">Upload</button:submit>
+					</td>
+				</tr>
+			</table>
+        </form>
+		
+	</body>
+</html>

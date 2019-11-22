@@ -1,0 +1,30 @@
+{{#each list}}
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Songs Listing</title>
+	</head>
+	<body>
+
+		<h1>Songs Listing</h1>
+			<table border="1px">
+                <tr>
+                    <th>Flag</th>
+                    <th>Title</th>
+                    <th>Country</th>
+                    <th>Listen Slots</th>
+                    <th>Checked Out</th>
+                </tr>
+				<tr>
+					<td><img src ="images/{{ country }}.png" style="height: 20px; width: auto;"></src></td>
+					<td>{{ title }}</td>
+                    <td>{{ country }}</td>
+                    <td>{{ listen_slots }}</td>
+                    <td>{{ checked_out }}</td>
+                </tr>
+            </table>
+
+		
+	</body>
+</html>
+{{/each}}

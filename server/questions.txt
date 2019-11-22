@@ -1,0 +1,18 @@
+Task 1
+Write your schemas below. Consider your MySQL database as part of the given music database.
+
+- See paf-assessment\server\data\schema.sql
+
+Explain briefly your choice of persistence store.
+1) mySQL is use to store username, I have created the rest of the sql to store the transactions but the insertation to mySQL is failing at promise.
+2) But when change to mongodb to store the transactions, it is able to work.
+3) s3 will be used to store the mp3 songs.
+
+
+
+Task 7
+Using the information capture by your application's data model and the database connections/pool declared in your application, show using JavaScript, the ranking of national anthems by their listening popularity across your service's user base. You should rank your the songs from the most popular to the least popular. The ranking information must include the following 
+- song name
+- number of the times it was listen
+- the last time (date and time) the song was listen
+
