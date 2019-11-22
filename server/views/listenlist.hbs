@@ -18,7 +18,10 @@
 					<td><img src ="images/{{ country }}.png" style="height: 20px; width: auto;"></src></td>
 					<td>{{ title }}</td>
                     <td>{{ country }}</td>
-                    <td if {{check_out}}==0>Not available</td>
+					 {{@key}}: {{check_out}} ==0
+                    	<td>Not available</td>
+					 {{@key}}: {{check_out}} >0
+					 	<td><button type ="submit">Listen</button></td>					
                 </tr>
             </table>
 
